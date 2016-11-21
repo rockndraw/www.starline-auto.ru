@@ -687,28 +687,30 @@
         </div>
         <div class="header_middle">
             <a class="header_logo" href="../index.html"></a>
-            
+           
 			<div class='teh-centers'>
 				<ul class="nolist general_dropdown_list" style=" display: block;">
                         <li class="hr_border">
+                            <span class="general_subway_block general_subway_block_blue">Кунцевская</span><br>
+							
                             <a class="header-anc" href="../contacts/index.html#tehcenter_id_1825"> ул. Коцюбинского, д.
                                 4</a>
-                            <br><span class="general_subway_block general_subway_block_blue">Кунцевская</span>
                         </li>
                         <li class="hr_border">
+							<span class="general_subway_block general_subway_block_grey">Аннино</span><br>
                             <a class="header-anc" href="../contacts/index.html#tehcenter_id_234">Востряковский проезд,
                                 д.10 Б, с2</a>
-                            <br><span class="general_subway_block general_subway_block_grey">Аннино</span>
+                            
                         </li>
                         <li class="hr_border">
+							<span class="general_subway_block general_subway_block_brown">Краснопресненская</span><br>
                             <a class="header-anc" href="../contacts/index.html#tehcenter_id_233">ул. Новый Арбат,
-                                д.36</a>
-                            <br><span class="general_subway_block general_subway_block_brown">Краснопресненская</span>
+                                д.36</a><br>
                         </li>
                         <li class="hr_border">
+                            <span class="general_subway_block general_subway_block_orange">ВДНХ</span><br>
                             <a class="header-anc" href="../contacts/index.html#tehcenter_id_232">Проспект Мира, д. 186
-                                c.1</a>
-                            <br><span class="general_subway_block general_subway_block_orange">ВДНХ</span>
+                                c.1</a><br>
                         </li>
                     </ul>
 			</div>
@@ -1717,6 +1719,25 @@
 	}
 	.teh-centers .general_dropdown_list li .general_subway_block{
 		margin-top:2px;
+		padding-left: 0;
+	}
+	
+	.teh-centers .general_dropdown_list li .general_subway_block:before{
+       left: -30px;
+		width: 25px;
+		height: 25px;
+		top: 6px;
+		background: url(info/metro.png) no-repeat;
+	}
+	
+	.teh-centers .general_dropdown_list li .general_subway_block.general_subway_block_orange:before{
+		background-position:-33px -46px;
+	}
+	.teh-centers .general_dropdown_list li .general_subway_block.general_subway_block_grey:before{
+	    background-position: -33px 0px;
+	}
+	.teh-centers .general_dropdown_list li .general_subway_block.general_subway_block_brown:before{
+	 background-position: 0px -46px;
 	}
 </style>
 
