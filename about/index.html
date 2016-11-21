@@ -734,6 +734,26 @@
             </div>
         </div>
         <div class="header_bottom">
+		<div id="header-1" class="search-header">
+			  <nav class="header-nav">
+				<div class="search-button">
+				  <a href="#" class="search-toggle" data-selector="#header-1"></a>
+				</div>
+				<ul class="menu">
+				<ul class="menu">
+				  <li><a href="#">For Business</a></li>
+				  <li><a href="#">For Personal</a></li>
+				  <li><a href="#">Pricing</a></li>
+				  <li><a href="#">About</a></li>
+				  <li><a href="#">Contact</a></li>
+				</ul>
+				<form action="" class="search-box">
+				  <input type="text" class="text search-input" placeholder="Type here to search..." />
+				</form>
+			  </nav>
+			</div>
+
+		
             <div class="nav_dropdown_block js-general_dropdown_block">
                 <div class="header_catalogLink_block">
                     <a class="nav_dropdown_link js-general_dropdown_link false strl" href="index.html#"><span>Каталог</span></a>
@@ -1618,7 +1638,16 @@
 
 </div>
 <script type="text/javascript" src="../assets/js/jquery-1.11.1.min.js"></script>
+<script>
+$('.search-header').on('click', '.search-toggle', function(e) {
+  var selector = $(this).data('selector');
 
+  $(selector).toggleClass('show').find('.search-input').focus();
+  $(this).toggleClass('active');
+
+  e.preventDefault();
+});
+</script>
 <script type="text/javascript"
         src="https://www.starline-auto.ru/bitrix/cache/js/s1/starline_2c/template_af334f54867b12edda9d4140e2a1df41/template_af334f54867b12edda9d4140e2a1df41.js?1472740763313149"></script>
 
@@ -1626,6 +1655,15 @@
 <script type="text/javascript" src="../assets/js/html5shiv-3.7.2.min.js"></script>
 <script type="text/javascript" src="../assets/js/css3-mediaqueries-1.0.min.js"></script>
 <style>
+div#header-1 {
+    position: absolute;
+    right: -40px;
+    top: -2px;
+}
+.menu {
+    opacity: 0;
+    pointer-events: none;
+}
     .header_logo,
     .header_logo:before,
     .header_logo:after {
@@ -1707,7 +1745,7 @@
 		top: 0px;
 		left: 322px;
 		line-height: 20px;
-		z-index: 101;
+		z-index: 1;
 	}
 	.teh-centers .general_dropdown_list li{
 	    padding: 5px 0 0;
@@ -1739,7 +1777,141 @@
 	.teh-centers .general_dropdown_list li .general_subway_block.general_subway_block_brown:before{
 	 background-position: 0px -46px;
 	}
+	
+	body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.header-nav {
+  position: relative;
+  padding-right: 3em;
+}
+.header-nav:before, .header-nav:after {
+  content: '';
+  display: table;
+}
+.header-nav:after {
+  clear: both;
+}
+
+.menu {
+  display: inline-block;
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  display: inline-block;
+}
+.menu li a {
+  color: #0097bf;
+  display: block;
+  padding: 10px;
+  position: relative;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.search-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.search-toggle {
+  position: relative;
+  display: block;
+  height: 10px;
+  width: 10px;
+}
+.search-toggle::before, .search-toggle::after {
+  content: '';
+  position: absolute;
+  display: block;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.search-toggle::before {
+  border: 2px solid #0097bf;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  top: -2px;
+}
+.search-toggle::after {
+  height: 2px;
+  width: 7px;
+  background: #0097bf;
+  top: 10px;
+  left: 8px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.search-toggle.active::before {
+  width: 0;
+  border-width: 1px;
+  border-radius: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -1px;
+  left: 4px;
+}
+.search-toggle.active::after {
+  width: 12px;
+  left: -1px;
+  top: 4px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+#header-1 {
+  border-bottom: 2px solid #0097bf;
+}
+#header-1 .search-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  background-color: #0097bf;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#header-1 .search-box .search-input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1em;
+  border: 0;
+  background-color: transparent;
+  opacity: 0;
+  color: #fff;
+}
+#header-1 .search-box .search-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+#header-1.show .search-box {
+  max-height: 40px;
+}
+#header-1.show .search-box .search-input {
+  opacity: 1;
+}
+
+ul > li:before{
+	display:none;
+}
+
 </style>
+
 
 </body>
 </html>
