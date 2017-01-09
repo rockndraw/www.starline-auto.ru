@@ -95,6 +95,7 @@
           type="text/css" rel="stylesheet"/>
     <link href="https://www.starline-auto.ru/bitrix/cache/css/s1/starline_2c/template_1778eae3e327daade527f0d72e655f58/template_1778eae3e327daade527f0d72e655f58.css?1477582363223163"
           type="text/css" data-template-style="true" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" data-template-style="true" rel="stylesheet"/>
 
 
     <!--[if lte IE 9]>
@@ -687,12 +688,12 @@
         </div>
         <div class="header_middle">
             <a class="header_logo" href="../index.html"></a>
-           
+
 			<div class='teh-centers'>
 				<ul class="nolist general_dropdown_list" style=" display: block;">
                         <li class="hr_border">
                             <span class="general_subway_block general_subway_block_blue">Кунцевская</span><br>
-							
+
                             <a class="header-anc" href="../contacts/index.html#tehcenter_id_1825"> ул. Коцюбинского, д.
                                 4</a>
                         </li>
@@ -700,7 +701,7 @@
 							<span class="general_subway_block general_subway_block_grey">Аннино</span><br>
                             <a class="header-anc" href="../contacts/index.html#tehcenter_id_234">Востряковский проезд,
                                 д.10 Б, с2</a>
-                            
+
                         </li>
                         <li class="hr_border">
 							<span class="general_subway_block general_subway_block_brown">Краснопресненская</span><br>
@@ -714,7 +715,7 @@
                         </li>
                     </ul>
 			</div>
-			
+
             <div class="our-works">
                 <div class="our-works__picture">
                     <img src="info/work1.png" alt="работа 1"/>
@@ -739,6 +740,9 @@
 				<div class="search-button">
 				  <a href="#" class="search-toggle" data-selector="#header-1"></a>
 				</div>
+        <form action="" class="search-box">
+					  <input type="text" class="text search-input" placeholder="Поиск">
+				</form>
 				<ul class="menu">
 				<ul class="menu">
 				  <li><a href="#">For Business</a></li>
@@ -746,14 +750,11 @@
 				  <li><a href="#">Pricing</a></li>
 				  <li><a href="#">About</a></li>
 				  <li><a href="#">Contact</a></li>
-				</ul>
-				<form action="" class="search-box">
-				  <input type="text" class="text search-input" placeholder="Type here to search..." />
-				</form>
+				</ul>  
 			  </nav>
 			</div>
 
-		
+
             <div class="nav_dropdown_block js-general_dropdown_block">
                 <div class="header_catalogLink_block">
                     <a class="nav_dropdown_link js-general_dropdown_link false strl" href="index.html#"><span>Каталог</span></a>
@@ -1426,10 +1427,10 @@
             </div>
 
             <div class="clear"></div>
-			
-         
-			
-			
+
+
+
+
         </div>
         <div class="clear"></div>
     </header>
@@ -1639,15 +1640,15 @@
 </div>
 <script type="text/javascript" src="../assets/js/jquery-1.11.1.min.js"></script>
 <script>
-$('.search-header').on('click', '.search-toggle', function(e) {
-  var selector = $(this).data('selector');
+	$('.search-toggle').on('click', function(e) {
+	  var selector = $(this).data('selector');
 
-  $(selector).toggleClass('show').find('.search-input').focus();
-  $(this).toggleClass('active');
+	  $(selector).toggleClass('show').find('.search-input').focus();
+	  $(this).toggleClass('active');
 
-  e.preventDefault();
-});
-</script>
+	  e.preventDefault();
+	});
+	</script>
 <script type="text/javascript"
         src="https://www.starline-auto.ru/bitrix/cache/js/s1/starline_2c/template_af334f54867b12edda9d4140e2a1df41/template_af334f54867b12edda9d4140e2a1df41.js?1472740763313149"></script>
 
@@ -1678,7 +1679,7 @@ div#header-1 {
     .header_middle {
         position: relative;
     }
-	
+
 
     .our-works {
         position: absolute;
@@ -1696,7 +1697,7 @@ div#header-1 {
         text-align: center;
         text-transform: uppercase;
     }
-	
+
 	.our-works__text:hover{
 		color:blue;
 		cursor:pointer;
@@ -1727,11 +1728,11 @@ div#header-1 {
 	.header_catalogLink_block a{
 		border:none;
 	}
-	
+
 	.header_bottom{
 		width: 1154px;
 	}
-	
+
 	.teh-centers .general_dropdown_list{
 	    display: block;
 		font-size: 0;
@@ -1759,7 +1760,7 @@ div#header-1 {
 		margin-top:2px;
 		padding-left: 0;
 	}
-	
+
 	.teh-centers .general_dropdown_list li .general_subway_block:before{
        left: -30px;
 		width: 25px;
@@ -1767,7 +1768,7 @@ div#header-1 {
 		top: 6px;
 		background: url(info/metro.png) no-repeat;
 	}
-	
+
 	.teh-centers .general_dropdown_list li .general_subway_block.general_subway_block_orange:before{
 		background-position:-33px -46px;
 	}
@@ -1777,7 +1778,7 @@ div#header-1 {
 	.teh-centers .general_dropdown_list li .general_subway_block.general_subway_block_brown:before{
 	 background-position: 0px -46px;
 	}
-	
+
 	body {
   font-family: 'Roboto', sans-serif;
 }
